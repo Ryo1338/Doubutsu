@@ -13,6 +13,7 @@ void setup() {
 void draw() {
   board.draw();
   komaList.draw();
+  gs.checkWinner();
 }
 
 // マウスがクリックされ、離されたときに呼び出されるメソッド
