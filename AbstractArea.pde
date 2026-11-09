@@ -1,8 +1,8 @@
-abstract class AbstractArea {
-  int posX;
-  int posY;
-  int tate;
-  int yoko;
+  abstract class AbstractArea {
+    int posX;
+    int posY;
+    int tate;
+    int yoko;
 
   AbstractArea(int posX, int posY, int yoko, int tate) {
     this.posX = posX;
@@ -12,4 +12,10 @@ abstract class AbstractArea {
   }
 
   abstract void draw();
+  
+  boolean isInThisArea(int x, int y) {
+    if (x>=this.posX && x<this.posX+this.yoko && y>=this.posY && y<this.posY+this.tate) return true;
+    else return false;
+  }
+
 }
